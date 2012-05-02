@@ -1,0 +1,9 @@
+<?xml version="1.0" ?>
+<!-- $Id: auth.file.xml 39 2008-07-28 09:45:04Z lko $ -->
+<config>
+	<file>/path/to/file</file>
+	<delimeter>:</delimeter>
+	<!-- egalwas:wieauchimmer:BENUTZERNAME:PASSWORD -->
+	<format>::uservar:passvar</format>
+	<sechash>md5</sechash>
+</config>

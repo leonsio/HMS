@@ -1,0 +1,45 @@
+<?xml version="1.0" ?>
+<config>
+	<HMS>
+		<!--  URL Relative to Host -->
+		<url>/hms/</url> 
+		<template>basic</template>
+		<local_network>192.168.178.0/24,123.123.123.123</local_network>
+	</HMS>
+	<DB>
+		<!-- pdo/mysqli eventuell spaeter sqlite native? -->
+		<engine>mysqli</engine>
+		<!-- nur bei pdo relevant -->
+		<dbtype></dbtype>
+		<dbuser>hmsuser</dbuser>
+		<dbpass>hmspass</dbpass>
+		<dbhost>localhost</dbhost>
+		<dbport>3306</dbport>
+		<dbname>HMS</dbname>
+	</DB>
+	<SESSION>
+		<!--  files ist default php storage -->
+		<!-- Optionen mysql/files -->
+		<engine>files</engine>
+		<dbtabl></dbtabl>
+	</SESSION>
+	<AUTH>
+		<!-- sql/static/ldap/radius/soap/file/passwd -->
+		<engine>static</engine>
+		<static>xml</static>
+	</AUTH>
+	<WIDGETS>
+		<weather>
+			<plz>12345</plz>
+			<device>
+                <!-- todo-->
+				<module>Homematic</module>
+				<id>2841</id>
+			</device>
+		</weather>
+		<fuel>
+			<plz>12345</plz>
+			<type>Diesel</type>
+		</fuel>
+	</WIDGETS>
+</config>

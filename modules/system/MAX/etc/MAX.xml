@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MAX>
+  <server>
+	<host>192.168.178.35</host>
+	<port>80</port>
+	<cache>
+		<time>604800</time> <!--  0 schaltet den Cache ab, default 1 Woche = 604800 -->
+	</cache>
+  </server>
+</MAX>

@@ -1,0 +1,16 @@
+<?xml version="1.0" ?>
+<!-- $Id: auth.static.xml 68 2008-08-19 08:24:58Z lko $ -->
+<config>
+	<user>
+		<username>admin</username>
+		<password>admin</password>
+	</user>
+<!--
+	<user>
+		<username>user</username>
+		<password>5f4dcc3b5aa765d61d8327deb882cf99</password>
+		<sechash>md5</sechash>
+		<groups />
+	</user>
+-->
+</config>

@@ -1,0 +1,10 @@
+<?xml version="1.0" ?>
+<!-- $Id: auth.sql.xml 39 2008-07-28 09:45:04Z lko $ -->
+<config>
+	<sql>
+		<table>users</table>
+		<userfield>name</userfield>
+		<passfield>password</passfield>
+		<sechash>md5</sechash>
+	</sql>
+</config>

@@ -1,0 +1,67 @@
+Das Projekt ist noch in der Pre-Alpha Phase
+Die Doku ist eher für Entwickler gedacht
+
+
+Was geht:
+
+Es können alle Elemente von Homematic/MAX! angezeigt werden
+Die Anzeige sollte sowohl auf Smartphone als auch auf dem Tablet laufen
+Logging aller Zustände bei Homematic erfolgt in die SQL Datenbank
+Anzeige in Form von Diagrammen ist möglich
+
+
+Was nicht geht:
+
+Die Zuordnung der HM/MAX! Geräte muss manuell in der Datenbank erstellt werden
+Die Steuerung der Elemente ist noch nicht implementiert
+Link sowie die Generierung der Diagramme für jedes Element fehlt
+Logging der aktuellen Zustände bei MAX! geht nicht ( muss als Cronjob implementiert werden )
+Reine JSON Template wurde vorbereitet, ist aber ohne Funktion
+
+
+Installation
+
+Alle Dateien in einen beliebigen Ordner entpacken
+Die Datei /config/config.xml entsprechend anpassen
+unter /config/Auth/auth.static.xml Benutzer eintragen, bzw. anpassen
+Es müssen 2 MySQL Datenbanken angelegt werden HMS und HMS_DATA
+MySQL Dump unter /share/mysql.hms.sql sowie /share/mysql.hms_data.sql in die jeweiligen Datenbanken einspielen
+In der Datenbank HMS_DATA die Tabelle TEMPLATE für weitere Monate kopieren ( create table 201207 as TEMPLATE; )
+
+
+Konfiguration
+
+Die Konfiguration der Anwendung erfolgt vorerst an verschiedenen Stellen
+
+Globale Konfiguration von HMS:          /config/config.xml
+Konfiguration der Module:               /modules/system/MODULNAME/etc/MODULNAME.xml
+
+Die Zuordnung der verschiedenen Elemente erfolgt generell in SQL
+
+Tabelle:
+hms_cache           Gibt auskunft, wann die Modul-Daten zuletzt aktualisiert wurden
+hms_devices         Platzhalter für künftige Einträge
+hms_floors          Hier müssen die Stockwerke mit einer ID eingetragen werden
+hms_modules         Teilfunktional, gibt Auskunft über installierte Module
+hms_rooms           Hier stehen die Räume inkl. Zuordnung zu Stockwerken
+hms_rooms_map       Mapping zwischen HMS und Modul Räumen
+hms_users           Platzhalter für künftige Einträge
+
+In allen HMS Tabellen wurden Beispieleinträge hinterlegt
+
+
+Jedes Modul kann mehrere Tabellen verwenden
+Die meisten Tabellen werden nach dem ersten Start automatisch gefüllt
+Die IDs der Räume müssen in hms_rooms_map hinterlegt werden um eine Zuordnung zu HMS herzustellen
+
+Tabelle:
+homematic_device_channel
+homematic_devices
+homematic_room_device
+homematic_rooms
+max_device_log
+max_devices
+max_room_device
+max_rooms
+
+

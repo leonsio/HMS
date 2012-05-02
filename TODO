@@ -1,0 +1,21 @@
+Cache optimieren/zentralisieren 
+	- Es sollte eigentlich alles in SQL gespeichert werden
+	- aktuelle/letzte Werte werden bereits von HM in die DB geschrieben
+	
+Einstellungen zentralisieren
+	- Verschiedene Modul-Einstellungen nach /config verschieben
+
+GUI Controls
+	- Operationen für die GUI definieren
+	- Mapping Datei einlesen und daraus Controls bauen
+
+i18n
+	- Mehrsprachigkeit einbauen
+
+
+Admin Bereich
+	- Administrationsbereich zum Mapping von Geräten/Räumen auf die HMS Elemente
+	- Anlegen weiterer HMS Elemente
+
+Module/Widgets
+	- Zusammenspiel zwischen den Elementen verbessern

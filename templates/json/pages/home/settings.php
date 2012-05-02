@@ -1,0 +1,1 @@
+Hier kommt die Zuordnung von Räumen mit jeweiligen Modul Räumen, sowie Geräten hin

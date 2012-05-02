@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<homematic>
+	<server>
+		<host>192.168.178.29</host>
+		<port>80</port> <!-- HTTP -->
+		<use_rpc>1</use_rpc> <!-- 1 = XML-RPC Api verwenden, 0 nur JSON verwenden -->
+		<use_bin_proxy>1</use_bin_proxy> <!-- braucht HMXMLBIN Tool, beschleunigt CUxD Abfragen -->
+		<auth>
+			<username>HM_USER</username>
+			<password>HM_PASS</password>
+		</auth>	
+		<interface>
+			<BidCos-RF>2001</BidCos-RF>
+			<BidCos-Wired>2000</BidCos-Wired>
+			<System>2000</System>
+			<CUxD>8701</CUxD>
+		</interface>
+		<cache>
+			<time>604800</time> <!--  0 schaltet den Cache ab, default 1 Woche = 604800 -->
+		</cache>	
+	</server>
+</homematic>

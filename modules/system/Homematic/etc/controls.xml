@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Mapping/Anordnung der Elemente in der GUI -->
+<type>
+	<HM-WDS10-TH-O>
+	</HM-WDS10-TH-O>
+	<!-- Fensterkontakt -->
+	<HM-Sec-SC>
+	</HM-Sec-SC>
+	<!-- Fensterdrehkontakt -->
+	<HM-Sec-RHS>
+	</HM-Sec-RHS>
+	<!-- Stellantrieb -->
+	<HM-CC-VD>
+	</HM-CC-VD>
+	<!-- Wandthermostat -->
+	<HM-CC-TC>
+	</HM-CC-TC>
+	<!-- Bewegungsmelder -->
+	<HM-Sec-MDIR>
+	</HM-Sec-MDIR>
+	<!-- Keymatic -->
+	<HM-Sec-Key>
+	</HM-Sec-Key>
+	<!-- Funkhandsender Alarmanlage -->
+	<HM-RC-Sec3-B>
+	</HM-RC-Sec3-B>
+	<HM-RC-Sec3>
+	</HM-RC-Sec3>	
+	<!-- Funkhandsender KEymatic -->
+	<HM-RC-Key3>
+	</HM-RC-Key3>
+	<!-- Wetterstation -->
+	<HM-WDS100-C6-O>
+	</HM-WDS100-C6-O>
+</type>
