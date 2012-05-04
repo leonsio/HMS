@@ -21,12 +21,14 @@ Reine JSON Template wurde vorbereitet, ist aber ohne Funktion
 
 Installation
 
-Alle Dateien in einen beliebigen Ordner entpacken
+Alle Dateien in einen beliebigen Ordner unter Webserver entpacken
 Die Datei /config/config.xml entsprechend anpassen
 unter /config/Auth/auth.static.xml Benutzer eintragen, bzw. anpassen
 Es müssen 2 MySQL Datenbanken angelegt werden HMS und HMS_DATA
 MySQL Dump unter /share/mysql.hms.sql sowie /share/mysql.hms_data.sql in die jeweiligen Datenbanken einspielen
 In der Datenbank HMS_DATA die Tabelle TEMPLATE für weitere Monate kopieren ( create table 201207 as TEMPLATE; )
+
+Siehe INSTALL für weitere Informationen
 
 
 Konfiguration

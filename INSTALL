@@ -1,0 +1,57 @@
+Anbei eine kleine Installationsanleitung für DEBIAN/UBUNTU
+
+1. Pakete installieren:
+apt-get install libapache2-mod-php5filter php5-curl php5-xmlrpc php5-cli php5-mysql mysql-server mysql-client git
+
+
+Bei der Installation Password für MySQL bei Bedarf eingeben und sich dieses merken
+
+2. Ins Web Verzeichnis wechseln
+
+cd /var/www/
+
+
+3 Aktuelle Daten von Github runterladen
+
+git clone http://github.com/leonsio/HMS.git
+
+
+4. isn HMS Verzeichnis wechseln
+
+cd HMS/
+
+
+5. MySQL vorbereiten
+mysql -p -e "CREATE DATABASE HMS"
+mysql -p -e "CREATE DATABASE HMS_DATA"
+mysql -p HMS < share/mysql.hms.sql 
+mysql -p HMS_DATA < share/mysql.hms_data.sql
+
+
+6. Apache Konfig bearbeiten und .htaccess und mod_rewrite aktivieren
+
+a2enmod rewrite
+vi /etc/apache2/sites-enabled/000-default
+
+
+unter <Directory /var/www/> sollten die Einträge wiefolgt aussehen:
+<Directory /var/www/>
+RewriteEngine on
+Options -Indexes FollowSymLinks MultiViews
+AllowOverride All
+Order allow,deny
+allow from all
+</Directory>
+
+
+7. Konfiguration von HMS anpassen
+
+vi config/config.xml
+
+hier sollten die Parameter URL und die Datenbankverbindung, sowie ggf. Wetter-PLZ angepasst werden
+Auch kann hier eigene IP (nicht die des Servers) eingetragen werden, für Autologin
+
+8. Apache neustarten
+
+/etc/init.d/apache2 restart
+

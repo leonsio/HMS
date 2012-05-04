@@ -29,6 +29,7 @@
 		<static>xml</static>
 	</AUTH>
 	<WIDGETS>
+        <!-- nur ein Platzhalter siehe /widgets/weather/weather.php -->
 		<weather>
 			<plz>12345</plz>
 			<device>
